@@ -236,15 +236,6 @@ section {
 
 /* ####################################### */
 /* NAVBAR SECTION */
-/* Navbar Styles */
-/* Navbar Styles */
-/* Navbar Styles */
-/* Nav-Container Specific Styles */
-/* Nav-Container Specific Styles */
-/* Navbar Container */
-/* Navbar Container */
-/* Navbar Container */
-/* Navbar Container */
 .nav-container {
   display: flex;
   justify-content: space-between;
@@ -1824,9 +1815,7 @@ li {
   margin-top: -100px;
   margin-left: -50px;
 }
-.icon-box {
-  padding: ;
-}
+
 .icon-sec-black {
   display: inline-block;
   border-radius: 50%;
@@ -1999,8 +1988,7 @@ i.fas.fa-long-arrow-alt-right {
   animation-duration: 0.4s;
   border-radius: 0.3rem;
 }
-.modal-header-smm {
-}
+
 .modal-header h2 {
   font-size: 1.25rem;
   margin-top: 14px;
@@ -2025,8 +2013,7 @@ ul.square-smm {
   list-style-type: disclosure-closed;
   margin: 10px 0px 20px 10px;
 }
-.closeenq {
-}
+
 .close {
   color: #fff !important;
   float: right;
@@ -2386,10 +2373,7 @@ ul.square-smm {
   font-weight: 600;
   letter-spacing: 1px;
 }
-.vb_title {
-}
-.overlay_creative {
-}
+
 .btn-cta {
   font-family: "Poppins", Sans-serif;
   font-size: 20px;
@@ -2493,7 +2477,6 @@ p.link a:hover {
   font-size: 20px;
   font-weight: 800;
   line-height: 22px;
-  font-color: rgb(255, 255, 255);
 }
 .cont-details button {
   background-color: #fff;
@@ -3975,11 +3958,6 @@ span i {
 
 /* resposive CSS Code */
 
-@media max-width: 1199px {
-  .section-padding {
-    padding-top: 70px;
-  }
-}
 @media (max-width: 991px) {
   .section-padding {
     padding-top: 50px;
@@ -4223,9 +4201,7 @@ span i {
   line-height: 25px;
   text-align: center;
 }
-/graphic-design page end/ /viralcard css start/ .viralimg1 {
-  width: 400px;
-}
+
 .viralfont {
   color: #212121;
   font-family: Poppins, Sans-serif;
@@ -4383,11 +4359,6 @@ span i {
   color: #ff0000;
   font-size: 10px;
   margin-top: 20px;
-}
-/viral css end/ .center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /*/koral media query/*/
