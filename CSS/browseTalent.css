@@ -1,0 +1,331 @@
+/* Specific styles for the form-section */
+.form-section .input-group {
+  display: flex;
+  width: 100%;
+  justify-content: space-between; /* Ensure side by side layout */
+}
+
+.form-section .search-input {
+  width: 80% !important; /* Ensure this takes up 80% of the space */
+  padding: 10px 15px;
+  border: 2px solid red;
+  border-radius: 10px 0 0 10px;
+  font-size: 16px;
+}
+
+.form-section .search-input:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+.form-section .search-button {
+  width: 18% !important; /* Ensure button takes up 18% of the space */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 0 10px 10px 0;
+  background: linear-gradient(135deg, #ff4b2b, #ff416c);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.form-section .search-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(255, 0, 0, 0.2);
+}
+
+/* Form Section */
+.form-section {
+  background-color: white;
+  padding: 20px 30px; /* Added more padding on left and right */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 1000px;
+}
+
+/* Input Group */
+.form-section .input-group {
+  display: flex;
+  width: 100%;
+  justify-content: space-between; /* Ensure side by side layout */
+}
+
+/* Search Input */
+.form-section .search-input {
+  width: 80% !important; /* Ensure this takes up 80% of the space */
+  padding: 10px 15px;
+  border: 2px solid red;
+  border-radius: 10px 0 0 10px;
+  font-size: 16px;
+  height: 40px; /* Set a fixed height for the input */
+}
+
+/* Search Input Focus */
+.form-section .search-input:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+/* Search Button */
+.form-section .search-button {
+  width: 18% !important; /* Ensure button takes up 18% of the space */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 0 10px 10px 0;
+  background: linear-gradient(135deg, #ff4b2b, #ff416c);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  height: 40px; /* Set the same height as the search input */
+  position: relative;
+  bottom: 4px; /* Move button 2px up */
+}
+
+/* Search Button Hover */
+.form-section .search-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(255, 0, 0, 0.2);
+}
+
+/* Option Section */
+.option-section {
+  margin-top: 20px;
+}
+
+/* Row for Select Options */
+.option-group-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Space between each select option */
+  margin-bottom: 20px;
+}
+
+/* Option Group Styling */
+.option-group {
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+/* Styling for Select and Input elements */
+.form-control {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 2px solid #ccc;
+}
+
+/* Slider Styling */
+/* #experience {
+  width: 100%;
+  margin-top: 10px;
+} */
+
+/* Label Styling */
+label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+/* Styling for the slider */
+/* Styling for the slider */
+/* Styling for the slider */
+
+/* General styling for the option section */
+.option-section {
+  margin-top: 20px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+/* Form field styling */
+.form-control {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Optional label styling */
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+/* General styling for the option section */
+.option-section {
+  margin-top: 20px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  align-items: center; /* Align items in the center vertically */
+}
+
+/* Form field styling */
+.form-control {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Slider styling */
+.slider {
+  width: 100%;
+  height: 6px; /* Slimmer track */
+  -webkit-appearance: none;
+  appearance: none;
+  background: #fff;
+  border-radius: 5px; /* Slightly rounded corners */
+  outline: none;
+  transition: background 0.3s ease;
+}
+
+/* Slider filled portion */
+.slider::-webkit-slider-runnable-track {
+  background: #e0e0e0;
+  border-radius: 5px;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px; /* Smaller thumb */
+  height: 16px;
+  background: #ff416c; /* Bright red thumb */
+  border: none;
+  border-radius: 50%; /* Circular thumb */
+  cursor: pointer;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.slider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background: #ff416c;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Dynamic red fill effect */
+.slider:focus::-webkit-slider-runnable-track {
+  background: linear-gradient(
+    to right,
+    #ff416c 0%,
+    #ff416c var(--slider-value),
+    #e0e0e0 var(--slider-value),
+    #e0e0e0 100%
+  );
+}
+
+/* Value display */
+span {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-left: 10px;
+}
+
+/* Ensure proper spacing and alignment */
+.row .col-md-4 {
+  flex: 1;
+  margin-right: 15px;
+}
+
+.row .col-md-4:last-child {
+  margin-right: 0;
+}
+
+/* Optional label styling */
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+/* IMAGES */
+
+/* Styling for the images-section */
+.images-section {
+  margin: 20px auto;
+  max-width: 100%;
+  padding: 10px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.image-card {
+  width: calc(20% - 20px); /* Adjust width */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f8f8;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+  height: 350px; /* Fixed height for uniformity */
+}
+
+.image {
+  width: 100%;
+  height: 180px; /* Set a consistent height */
+  object-fit: cover; /* Ensure images are cropped to fit */
+  border-radius: 8px;
+}
+
+.image-card .image-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  text-decoration: none;
+}
+
+.image-card .image-details {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-grow: 1; /* Ensure the text section fills remaining space */
+}
+
+.image-card .image-details h4 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.image-card .image-details p {
+  font-size: 14px;
+  margin: 2px 0;
+}

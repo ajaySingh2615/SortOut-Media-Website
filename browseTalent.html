@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- <link rel="stylesheet" href="css/general.css" /> -->
+    <!-- <link rel="stylesheet" href="css/style.css" /> -->
+    <link rel="stylesheet" href="css1/styles.css" />
+    <link rel="stylesheet" href="css1/browseTalent.css" />
+    <!-- <link rel="stylesheet" href="css/newComponents.css" /> -->
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <!-- bootstrap styles -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="asset/style.css" />
+    <link rel="stylesheet" href="asset/style.css" />
+    <link rel="stylesheet" href="asset/hashtag.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+    />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- LOAD JQUERY LIBRARY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- LOADING FONTS AND ICONS -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400%7CPoppins:700&display=swap"
+      rel="stylesheet"
+      property="stylesheet"
+      media="all"
+      type="text/css"
+    />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="slider/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="slider/fonts/font-awesome/css/font-awesome.css"
+    />
+
+    <!-- REVOLUTION STYLE SHEETS -->
+    <link rel="stylesheet" type="text/css" href="slider/css/rs6.css" />
+    <!-- REVOLUTION LAYERS STYLES -->
+
+    <script src="https://cdn.lordicon.com/fudrjiwc.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/gsap.min.js"></script>
+
+    <!-- Include GSAP (GreenSock Animation Platform) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <title>Sortout Media</title>
+  </head>
+  <body>
+    <section
+      id="navbar"
+      style="
+        background: linear-gradient(
+          90deg,
+          rgba(255, 0, 0, 1) 0%,
+          rgba(0, 0, 0, 1) 100%
+        );
+        color: white;
+      "
+    >
+      <div class="nav-container">
+        <a href="#" class="logo">YourLogo</a>
+        <ul class="nav-links">
+          <li>
+            <a href="#home">
+              <lord-icon
+                src="https://cdn.lordicon.com/dxjqoygy.json"
+                trigger="hover"
+              ></lord-icon>
+              <span>Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="#about">
+              <lord-icon
+                src="https://cdn.lordicon.com/ndydpcaq.json"
+                trigger="hover"
+              ></lord-icon>
+              <span>About</span>
+            </a>
+          </li>
+          <li>
+            <a href="#services">
+              <lord-icon
+                src="https://cdn.lordicon.com/hpivxauj.json"
+                trigger="hover"
+              ></lord-icon>
+              <span>Services</span>
+            </a>
+          </li>
+          <li>
+            <a href="#contact">
+              <lord-icon
+                src="https://cdn.lordicon.com/bhfjfgqz.json"
+                trigger="hover"
+              ></lord-icon>
+              <span>Contact</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- browse talent section -->
+    <div class="form-section">
+      <div class="input-group">
+        <input
+          type="text"
+          class="form-control search-input"
+          placeholder="Search..."
+        />
+        <button class="btn btn-danger search-button">Search</button>
+      </div>
+
+      <div class="option-section">
+        <div class="row">
+          <!-- Team Categories, Gender, Languages Spoken -->
+          <div class="col-md-4">
+            <label for="team-category">Team Categories</label>
+            <select id="team-category" class="form-control">
+              <option>Actors</option>
+              <option>Models</option>
+              <option>IT</option>
+              <option>Dancers</option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <label for="gender">Gender</label>
+            <select id="gender" class="form-control">
+              <option>Male</option>
+              <option>Female</option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <label for="languages">Languages Spoken</label>
+            <select id="languages" class="form-control">
+              <option>Hindi</option>
+              <option>English</option>
+              <option>Urdu</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <!-- Years of Experience, Waist, Talent Height -->
+          <div class="col-md-4">
+            <label for="experience">Years of Experience</label>
+            <input
+              type="range"
+              id="experience"
+              min="0"
+              max="15"
+              value="0"
+              class="slider"
+            />
+            <span id="experience-value">0</span>
+          </div>
+          <div class="col-md-4">
+            <label for="waist">Waist in CM</label>
+            <input
+              type="range"
+              id="waist"
+              min="0"
+              max="50"
+              value="0"
+              class="slider"
+            />
+            <span id="waist-value">0</span>
+          </div>
+          <div class="col-md-4">
+            <label for="height">Talent Height in CM</label>
+            <input
+              type="range"
+              id="height"
+              min="0"
+              max="178"
+              value="0"
+              class="slider"
+            />
+            <span id="height-value">0</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="images-section">
+      <!-- First row of images -->
+      <div class="row">
+        <div class="image-card">
+          <a href="#" class="image-link">
+            <img src="images/about-banner.png" alt="Image 1" class="image" />
+            <div class="image-details">
+              <h4>Name 1</h4>
+              <p>Age: 25</p>
+              <p>Talent Category: Actor</p>
+            </div>
+          </a>
+        </div>
+        <div class="image-card">
+          <a href="#" class="image-link">
+            <img src="images/Doe Jhon.jpg" alt="Image 2" class="image" />
+            <div class="image-details">
+              <h4>Name 2</h4>
+              <p>Age: 30</p>
+              <p>Talent Category: Model</p>
+            </div>
+          </a>
+        </div>
+        <div class="image-card">
+          <a href="#" class="image-link">
+            <img src="images/hero-banner.png" alt="Image 3" class="image" />
+            <div class="image-details">
+              <h4>Name 3</h4>
+              <p>Age: 28</p>
+              <p>Talent Category: IT</p>
+            </div>
+          </a>
+        </div>
+        <div class="image-card">
+          <a href="#" class="image-link">
+            <img src="images/Karala lavan.jpg" alt="Image 4" class="image" />
+            <div class="image-details">
+              <h4>Name 4</h4>
+              <p>Age: 22</p>
+              <p>Talent Category: Dancer</p>
+            </div>
+          </a>
+        </div>
+        <div class="image-card">
+          <a href="#" class="image-link">
+            <img src="image5.jpg" alt="Image 5" class="image" />
+            <div class="image-details">
+              <h4>Name 5</h4>
+              <p>Age: 24</p>
+              <p>Talent Category: Singer</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Second row of images -->
+      <div class="row">
+        <div class="image-card">
+          <a href="#" class="image-link">
+            <img src="image6.jpg" alt="Image 6" class="image" />
+            <div class="image-details">
+              <h4>Name 6</h4>
+              <p>Age: 26</p>
+              <p>Talent Category: Actor</p>
+            </div>
+          </a>
+        </div>
+        <div class="image-card">
+          <a href="#" class="image-link">
+            <img src="image7.jpg" alt="Image 7" class="image" />
+            <div class="image-details">
+              <h4>Name 7</h4>
+              <p>Age: 27</p>
+              <p>Talent Category: Model</p>
+            </div>
+          </a>
+        </div>
+        <div class="image-card">
+          <a href="#" class="image-link">
+            <img src="image8.jpg" alt="Image 8" class="image" />
+            <div class="image-details">
+              <h4>Name 8</h4>
+              <p>Age: 29</p>
+              <p>Talent Category: IT</p>
+            </div>
+          </a>
+        </div>
+        <div class="image-card">
+          <a href="#" class="image-link">
+            <img src="image9.jpg" alt="Image 9" class="image" />
+            <div class="image-details">
+              <h4>Name 9</h4>
+              <p>Age: 21</p>
+              <p>Talent Category: Dancer</p>
+            </div>
+          </a>
+        </div>
+        <div class="image-card">
+          <a href="#" class="image-link">
+            <img src="image10.jpg" alt="Image 10" class="image" />
+            <div class="image-details">
+              <h4>Name 10</h4>
+              <p>Age: 32</p>
+              <p>Talent Category: Singer</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    // Get the sliders and value spans
+    const experienceSlider = document.getElementById("experience");
+    const waistSlider = document.getElementById("waist");
+    const heightSlider = document.getElementById("height");
+
+    const experienceValue = document.getElementById("experience-value");
+    const waistValue = document.getElementById("waist-value");
+    const heightValue = document.getElementById("height-value");
+
+    // Function to update slider fill
+    function updateSliderFill(slider) {
+      const value =
+        ((slider.value - slider.min) / (slider.max - slider.min)) * 100;
+      slider.style.setProperty("--slider-value", `${value}%`);
+    }
+
+    // Update values and slider fill on input
+    experienceSlider.addEventListener("input", () => {
+      experienceValue.textContent = experienceSlider.value;
+      updateSliderFill(experienceSlider);
+    });
+
+    waistSlider.addEventListener("input", () => {
+      waistValue.textContent = waistSlider.value;
+      updateSliderFill(waistSlider);
+    });
+
+    heightSlider.addEventListener("input", () => {
+      heightValue.textContent = heightSlider.value;
+      updateSliderFill(heightSlider);
+    });
+
+    // Initialize sliders with their current values
+    updateSliderFill(experienceSlider);
+    updateSliderFill(waistSlider);
+    updateSliderFill(heightSlider);
+  </script>
+</html>
