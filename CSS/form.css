@@ -1,0 +1,29 @@
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+#displayData {
+  margin-top: 30px;
+}
+.card {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.card img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
