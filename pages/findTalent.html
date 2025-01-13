@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sortout Media - Careers</title>
+
+    <link
+      rel="shortcut icon"
+      href="images/Sortout Media SVG.svg"
+      type="image/svg+xml"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* General Styles */
+      :root {
+        --primary-red: #e63946;
+        --black: #0b0c10;
+        --white: #ffffff;
+        --grey-light: #f7f7f7;
+        --font-main: "Inter", sans-serif;
+        --font-size-base: 1em;
+        --font-color-text: #333;
+        --font-color-heading: #e63946;
+      }
+
+      body {
+        font-family: var(--font-main);
+        font-size: var(--font-size-base);
+        line-height: 1.6;
+        color: var(--font-color-text);
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, #f7f7f7, #ffffff);
+        overflow-x: hidden;
+      }
+
+      /* Apply light red background to all divs */
+      div {
+        background-color: #f8d7da;
+      }
+      /* Default Styling for OPEN POSITIONS title (Desktop) */
+
+      /* HEADER SECTION*/
+
+      .compact-header {
+        background: #f5f5f5;
+        color: #333;
+        text-align: left;
+        padding: 10px 20px;
+        border-bottom: 3px solid #d93636;
+        font-family: "Arial", sans-serif;
+      }
+
+      .compact-header .logo-container {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .compact-header .logo {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 2px solid #d93636;
+      }
+
+      .compact-header h1 {
+        font-size: 1.8em;
+        font-weight: bold;
+        margin: 0;
+        color: #d93636;
+        letter-spacing: 0.8px;
+      }
+
+      .compact-header p {
+        font-size: 1em;
+        font-weight: 400;
+        margin: 5px 0 0 75px;
+        color: #555;
+      }
+
+      .compact-header:hover h1 {
+        color: #ff4d4d;
+        transition: color 0.3s ease;
+      }
+
+      .compact-header:hover p {
+        color: #333;
+        transition: color 0.3s ease;
+      }
+
+      /* FOOTER SECTION */
+      .custom-footer {
+        background: #333;
+        color: #f5f5f5;
+        text-align: center;
+        padding: 15px 10px;
+        font-family: "Arial", sans-serif;
+        font-size: 0.9em;
+        border-top: 3px solid #d93636;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+      }
+
+      .custom-footer p {
+        margin: 0;
+        letter-spacing: 0.5px;
+        font-weight: 400;
+      }
+
+      .custom-footer p:hover {
+        color: #ff4d4d;
+        transition: color 0.3s ease;
+      }
+
+      /* Open Positions Title */
+      .open-positions h2 {
+        font-size: 4em;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        color: #333; /* Solid fallback color */
+        background: linear-gradient(90deg, #ff0000, #8b0000, #ffffff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text; /* Standard background-clip for non-WebKit browsers */
+      }
+
+      /* ###################### */
+      /* Section Styles */
+      /* Section Styles */
+      /* Section Styles */
+      .open-positions {
+        padding: 40px;
+        background-color: #f8f9fa;
+        text-align: center;
+      }
+
+      .open-positions-header h2 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      /* Job List (Container) */
+      /* Job List (Container) */
+      .job-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 30px;
+        padding: 20px 0;
+      }
+
+      /* Card Container */
+      /* Card Container */
+      /* Card Container */
+      /* Card Container */
+      /* Card Container */
+      #displayData {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 30px;
+        padding: 0 20px;
+        margin-top: 40px;
+      }
+
+      /* Card Styles */
+      .custom-card {
+        background: #fff; /* White background for cards */
+        border-radius: 12px;
+        width: 100%;
+        max-width: 300px;
+        transition: all 0.3s ease;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        border: 2px solid #e0e0e0;
+      }
+
+      .custom-card:hover {
+        transform: translateY(-5px); /* Smooth hover effect */
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+      }
+
+      /* Image Section */
+      .custom-card-img-wrapper {
+        width: 100%;
+        height: 60%; /* Image takes 60% of the card height */
+        overflow: hidden;
+        border-radius: 12px 12px 0 0;
+      }
+
+      .custom-card-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+
+      .custom-card:hover .custom-card-img {
+        transform: scale(1.05); /* Slight zoom effect on hover */
+      }
+
+      /* Content Section */
+      .custom-card-body {
+        padding: 15px;
+        height: 40%; /* Remaining height for the content */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: #333; /* Dark grey text for better readability */
+        text-align: center;
+      }
+
+      /* Title Styling */
+      .custom-card-title {
+        font-size: 1.6em;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #d32f2f; /* Red color for the name */
+        text-transform: capitalize;
+        letter-spacing: 1px;
+      }
+
+      /* Details Styling */
+      .custom-card-details {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .custom-card-details li {
+        margin-bottom: 8px;
+        font-size: 1em;
+        color: #555;
+        opacity: 0;
+        animation: fadeIn 1s forwards;
+      }
+
+      .custom-card-details li strong {
+        font-weight: 600;
+        color: #d32f2f; /* Red color for labels */
+      }
+
+      /* Animation for Text Fade-In */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      /* Responsive Design */
+      @media (min-width: 1200px) {
+        #displayData .custom-card {
+          width: calc(20% - 30px); /* 5 divs in a row */
+        }
+      }
+
+      @media (max-width: 1199px) and (min-width: 992px) {
+        #displayData .custom-card {
+          width: calc(25% - 30px); /* 4 divs in a row */
+        }
+      }
+
+      @media (max-width: 991px) and (min-width: 768px) {
+        #displayData .custom-card {
+          width: calc(33.33% - 30px); /* 3 divs in a row */
+        }
+      }
+
+      @media (max-width: 767px) and (min-width: 576px) {
+        #displayData .custom-card {
+          width: calc(50% - 30px); /* 2 divs in a row */
+        }
+      }
+
+      @media (max-width: 575px) {
+        #displayData .custom-card {
+          width: 100%; /* 1 div per row on small screens */
+        }
+      }
+
+      /* Footer Styling */
+      .custom-footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .custom-footer p {
+        margin: 0;
+        font-size: 1em;
+        color: #bbb;
+      }
+
+      /* CUSTOM BUTTON */
+      /* Add this to the .custom-card-body to accommodate the button */
+      .custom-card-body {
+        padding: 15px;
+        height: 40%; /* Remaining height for the content */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: #333; /* Dark grey text for better readability */
+        text-align: center;
+      }
+
+      /* Button Styling */
+      .book-now-btn {
+        background-color: #d32f2f; /* Red background for the button */
+        color: #fff; /* White text */
+        padding: 12px 20px;
+        border: none;
+        border-radius: 6px;
+        font-size: 1.1em;
+        font-weight: bold;
+        cursor: pointer;
+        margin-top: 15px;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+
+      .book-now-btn:hover {
+        background-color: #c2185b; /* Darker red when hovered */
+        transform: scale(1.05); /* Slight zoom effect on hover */
+      }
+
+      /* Responsive Button Styling */
+      @media (max-width: 575px) {
+        .book-now-btn {
+          font-size: 1em;
+          padding: 10px 18px;
+        }
+      }
+
+      .custom-card-body {
+        background-color: #fff;
+      }
+
+      .custom-card-title {
+        color: #0b0c10;
+        font-family: "Poppins", sans-serif;
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="compact-header">
+      <div class="logo-container">
+        <img src="/images/Sortout Media.jpeg" alt="Company Logo" class="logo" />
+        <h1>Sortout Media Careers</h1>
+      </div>
+      <p>Shape the future of digital marketing with us!</p>
+    </header>
+
+    <section class="open-positions">
+      <div class="open-positions-header">
+        <h2>Our Talents</h2>
+      </div>
+      <div class="job-list">
+        <div id="displayData" class="row">
+          <!-- Data fetched will be displayed here as cards -->
+        </div>
+      </div>
+    </section>
+
+    <footer class="custom-footer">
+      <p>&copy; 2025 Sortout Media. All rights reserved.</p>
+    </footer>
+
+    <!-- <script src="/JS/script.js"></script> -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const displayData = document.getElementById("displayData");
+
+        // Fetch and display data on page load
+        async function fetchData() {
+          try {
+            const response = await fetch("http://localhost:3000/fetch-data");
+            const data = await response.json();
+            console.log("Fetched Data:", data); // Debugging line
+            renderData(data);
+          } catch (error) {
+            console.error("Error fetching data:", error);
+          }
+        }
+
+        // Render data dynamically
+        // Render data dynamically with the "Book Now" button
+        function renderData(data) {
+          displayData.innerHTML = ""; // Clear existing content
+          data.forEach((item) => {
+            const card = document.createElement("div");
+            card.className = "custom-card";
+            card.innerHTML = `
+      <div class="custom-card-img-wrapper">
+        <img src="${item.image}" alt="User Image" class="custom-card-img">
+      </div>
+      <div class="custom-card-body">
+        <h3 class="custom-card-title">${item.name}</h3>
+        <ul class="custom-card-details">
+          <li><strong>Age:</strong> ${item.age}</li>
+          <li><strong>Experience:</strong> ${item.experience} years</li>
+        </ul>
+        <button class="book-now-btn">Book Now</button> <!-- Book Now Button -->
+      </div>
+    `;
+            displayData.appendChild(card);
+          });
+        }
+
+        // Fetch data when the page is loaded
+        fetchData();
+      });
+    </script>
+  </body>
+</html>
