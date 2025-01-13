@@ -13,8 +13,8 @@
 
     <!-- <link rel="stylesheet" href="css/general.css" /> -->
     <!-- <link rel="stylesheet" href="css/style.css" /> -->
-    <link rel="stylesheet" href="css1/styles.css" />
-    <link rel="stylesheet" href="css1/browseTalent.css" />
+    <link rel="stylesheet" href="CSS/styles.css" />
+    <link rel="stylesheet" href="CSS/browseTalent.css" />
     <!-- <link rel="stylesheet" href="css/newComponents.css" /> -->
 
     <script
@@ -153,193 +153,56 @@
 
     <!-- browse talent section -->
     <div class="form-section">
-      <div class="input-group">
-        <input
-          type="text"
-          class="form-control search-input"
-          placeholder="Search..."
-        />
-        <button class="btn btn-danger search-button">Search</button>
-      </div>
-
-      <div class="option-section">
-        <div class="row">
-          <!-- Team Categories, Gender, Languages Spoken -->
-          <div class="col-md-4">
-            <label for="team-category">Team Categories</label>
-            <select id="team-category" class="form-control">
-              <option>Actors</option>
-              <option>Models</option>
-              <option>IT</option>
-              <option>Dancers</option>
-            </select>
-          </div>
-          <div class="col-md-4">
-            <label for="gender">Gender</label>
-            <select id="gender" class="form-control">
-              <option>Male</option>
-              <option>Female</option>
-            </select>
-          </div>
-          <div class="col-md-4">
-            <label for="languages">Languages Spoken</label>
-            <select id="languages" class="form-control">
-              <option>Hindi</option>
-              <option>English</option>
-              <option>Urdu</option>
-            </select>
-          </div>
+      <form id="dynamic-form">
+        <div class="input-group">
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            placeholder="Enter Name"
+            required
+          />
         </div>
 
-        <div class="row">
-          <!-- Years of Experience, Waist, Talent Height -->
-          <div class="col-md-4">
-            <label for="experience">Years of Experience</label>
-            <input
-              type="range"
-              id="experience"
-              min="0"
-              max="15"
-              value="0"
-              class="slider"
-            />
-            <span id="experience-value">0</span>
-          </div>
-          <div class="col-md-4">
-            <label for="waist">Waist in CM</label>
-            <input
-              type="range"
-              id="waist"
-              min="0"
-              max="50"
-              value="0"
-              class="slider"
-            />
-            <span id="waist-value">0</span>
-          </div>
-          <div class="col-md-4">
-            <label for="height">Talent Height in CM</label>
-            <input
-              type="range"
-              id="height"
-              min="0"
-              max="178"
-              value="0"
-              class="slider"
-            />
-            <span id="height-value">0</span>
-          </div>
+        <div class="input-group">
+          <input
+            type="number"
+            class="form-control"
+            id="age"
+            placeholder="Enter Age"
+            required
+          />
         </div>
-      </div>
+
+        <div class="input-group">
+          <label for="team-category">Team Categories</label>
+          <select id="team-category" class="form-control">
+            <option value="Actor">Actors</option>
+            <option value="Model">Models</option>
+            <option value="IT">IT</option>
+            <option value="Dancer">Dancers</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label for="image-upload">Upload Image</label>
+          <input
+            type="file"
+            id="image-upload"
+            class="form-control"
+            accept="image/*"
+            required
+          />
+        </div>
+
+        <div class="input-group">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
     </div>
-    <div class="images-section">
-      <!-- First row of images -->
-      <div class="row">
-        <div class="image-card">
-          <a href="#" class="image-link">
-            <img src="images/about-banner.png" alt="Image 1" class="image" />
-            <div class="image-details">
-              <h4>Name 1</h4>
-              <p>Age: 25</p>
-              <p>Talent Category: Actor</p>
-            </div>
-          </a>
-        </div>
-        <div class="image-card">
-          <a href="#" class="image-link">
-            <img src="images/Doe Jhon.jpg" alt="Image 2" class="image" />
-            <div class="image-details">
-              <h4>Name 2</h4>
-              <p>Age: 30</p>
-              <p>Talent Category: Model</p>
-            </div>
-          </a>
-        </div>
-        <div class="image-card">
-          <a href="#" class="image-link">
-            <img src="images/hero-banner.png" alt="Image 3" class="image" />
-            <div class="image-details">
-              <h4>Name 3</h4>
-              <p>Age: 28</p>
-              <p>Talent Category: IT</p>
-            </div>
-          </a>
-        </div>
-        <div class="image-card">
-          <a href="#" class="image-link">
-            <img src="images/Karala lavan.jpg" alt="Image 4" class="image" />
-            <div class="image-details">
-              <h4>Name 4</h4>
-              <p>Age: 22</p>
-              <p>Talent Category: Dancer</p>
-            </div>
-          </a>
-        </div>
-        <div class="image-card">
-          <a href="#" class="image-link">
-            <img src="image5.jpg" alt="Image 5" class="image" />
-            <div class="image-details">
-              <h4>Name 5</h4>
-              <p>Age: 24</p>
-              <p>Talent Category: Singer</p>
-            </div>
-          </a>
-        </div>
-      </div>
 
-      <!-- Second row of images -->
-      <div class="row">
-        <div class="image-card">
-          <a href="#" class="image-link">
-            <img src="image6.jpg" alt="Image 6" class="image" />
-            <div class="image-details">
-              <h4>Name 6</h4>
-              <p>Age: 26</p>
-              <p>Talent Category: Actor</p>
-            </div>
-          </a>
-        </div>
-        <div class="image-card">
-          <a href="#" class="image-link">
-            <img src="image7.jpg" alt="Image 7" class="image" />
-            <div class="image-details">
-              <h4>Name 7</h4>
-              <p>Age: 27</p>
-              <p>Talent Category: Model</p>
-            </div>
-          </a>
-        </div>
-        <div class="image-card">
-          <a href="#" class="image-link">
-            <img src="image8.jpg" alt="Image 8" class="image" />
-            <div class="image-details">
-              <h4>Name 8</h4>
-              <p>Age: 29</p>
-              <p>Talent Category: IT</p>
-            </div>
-          </a>
-        </div>
-        <div class="image-card">
-          <a href="#" class="image-link">
-            <img src="image9.jpg" alt="Image 9" class="image" />
-            <div class="image-details">
-              <h4>Name 9</h4>
-              <p>Age: 21</p>
-              <p>Talent Category: Dancer</p>
-            </div>
-          </a>
-        </div>
-        <div class="image-card">
-          <a href="#" class="image-link">
-            <img src="image10.jpg" alt="Image 10" class="image" />
-            <div class="image-details">
-              <h4>Name 10</h4>
-              <p>Age: 32</p>
-              <p>Talent Category: Singer</p>
-            </div>
-          </a>
-        </div>
-      </div>
+    <div class="images-section" id="images-section">
+      <!-- Images will dynamically appear here -->
     </div>
   </body>
 

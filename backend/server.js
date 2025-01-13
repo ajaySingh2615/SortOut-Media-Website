@@ -38,6 +38,10 @@ cloudinary.config({
 const userSchema = new mongoose.Schema({
   name: String,
   age: Number,
+  team: String,
+  gender: String,
+  language: String,
+  experience: Number,
   image: String,
 });
 
@@ -62,11 +66,19 @@ const upload = multer({ storage });
 // POST: Handle form submission
 app.post("/submit-data", upload.single("image"), async (req, res) => {
   try {
-    const { name, age } = req.body;
+    const { name, age, team, gender, language, experience } = req.body;
     const imagePath = req.file ? req.file.path : "";
 
     // Save data to MongoDB
-    const user = new User({ name, age, image: imagePath });
+    const user = new User({
+      name,
+      age,
+      team,
+      gender,
+      language,
+      experience,
+      image: imagePath,
+    });
     const savedUser = await user.save();
 
     res
