@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sortout Media - Careers</title>
+
+    <link
+      rel="shortcut icon"
+      href="images/Sortout Media SVG.svg"
+      type="image/svg+xml"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* General Styles */
+      :root {
+        --primary-red: #e63946;
+        --black: #0b0c10;
+        --white: #ffffff;
+        --grey-light: #f7f7f7;
+        --font-main: "Inter", sans-serif;
+        --font-size-base: 1em;
+        --font-color-text: #333;
+        --font-color-heading: #e63946;
+      }
+
+      body {
+        font-family: var(--font-main);
+        font-size: var(--font-size-base);
+        line-height: 1.6;
+        color: var(--font-color-text);
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, #f7f7f7, #ffffff);
+        overflow-x: hidden;
+      }
+      /* General Styles */
+      .job-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+        padding: 40px;
+      }
+
+      .job-card {
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        overflow: hidden;
+      }
+
+      .job-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .job-card i {
+        font-size: 4em;
+        color: #4caf50;
+        margin-bottom: 15px;
+      }
+
+      .job-card h3 {
+        font-size: 1.5em;
+        font-family: "Arial", sans-serif;
+        color: #333;
+        margin-bottom: 10px;
+        font-weight: bold;
+        width: 288px; /* Set the width of the h3 element */
+        height: 76.78px; /* Set the height of the h3 element */
+        overflow: hidden;
+        line-height: 1.2;
+      }
+
+      .job-card p {
+        font-size: 1em;
+        color: #555;
+        margin-bottom: 15px;
+      }
+
+      .apply-btn {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        font-size: 1em;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+      }
+
+      .apply-btn:hover {
+        background-color: #388e3c;
+      }
+
+      /* light red background color to all divs */
+      /* Apply light red background to all divs */
+      div {
+        background-color: #f8d7da; /* Light red background */
+      }
+
+      /* General Styles */
+      .job-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+        padding: 40px;
+      }
+
+      .job-card {
+        background-color: #f9f9f9; /* Slightly off-white for contrast inside each job card */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        overflow: hidden;
+      }
+
+      .job-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .job-card i {
+        font-size: 4em;
+        color: #4caf50;
+        margin-bottom: 15px;
+      }
+
+      .job-card h3 {
+        font-size: 1.5em;
+        font-family: "Arial", sans-serif;
+        color: #333;
+        margin-bottom: 10px;
+        font-weight: bold;
+        width: 288px; /* Set the width of the h3 element */
+        height: 76.78px; /* Set the height of the h3 element */
+        overflow: hidden;
+        line-height: 1.2;
+      }
+
+      .job-card p {
+        font-size: 1em;
+        color: #555;
+        margin-bottom: 15px;
+      }
+
+      .apply-btn {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        font-size: 1em;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+      }
+
+      .apply-btn:hover {
+        background-color: #388e3c;
+      }
+
+      /* Changing apply color into red as i hover it */
+      /* General Styles */
+      .job-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+        padding: 40px;
+      }
+
+      .job-card {
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        overflow: hidden;
+        position: relative;
+      }
+
+      /* Hover effect */
+      .job-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Icon Style */
+      .job-card i {
+        font-size: 4em;
+        color: #4caf50; /* Default icon color */
+        margin-bottom: 15px;
+        transition: color 0.3s ease;
+      }
+
+      /* Button Style */
+      .apply-btn {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        font-size: 1em;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+      }
+
+      /* Hover effect for Icon and Button */
+      .job-card:hover i,
+      .job-card:hover .apply-btn {
+        color: #ffffff; /* Icon color change */
+        background-color: #f44336; /* Apply Now button turns red */
+      }
+
+      /* Text and other elements */
+      .job-card h3 {
+        font-size: 1.5em;
+        font-family: "Arial", sans-serif;
+        color: #333;
+        margin-bottom: 10px;
+        font-weight: bold;
+        width: 288px;
+        height: 76.78px;
+        overflow: hidden;
+        line-height: 1.2;
+      }
+
+      .job-card p {
+        font-size: 1em;
+        color: #555;
+        margin-bottom: 15px;
+      }
+
+      /* Default Styling for OPEN POSITIONS title (Desktop) */
+      .open-positions h2 {
+        font-family: "Roboto", sans-serif; /* Clean and modern font */
+        font-size: 4em; /* Bigger for emphasis */
+        font-weight: 800; /* Strong bold weight */
+        color: #000; /* Base black text for grounding */
+        letter-spacing: 1.5px; /* Balanced spacing for clarity */
+        text-transform: uppercase; /* Stands out as a title */
+        background: linear-gradient(
+          90deg,
+          #ff0000,
+          #8b0000,
+          #ffffff
+        ); /* Red and white gradient */
+        -webkit-background-clip: text; /* Clips gradient to the text */
+        -webkit-text-fill-color: transparent; /* Makes gradient visible */
+        text-align: center; /* Centers the title */
+        margin-bottom: 25px; /* Adds spacing below */
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Adjusted shadow for sharper text */
+      }
+
+      /* Tablet Devices */
+      @media (max-width: 768px) {
+        .open-positions h2 {
+          font-size: 3em; /* Slightly smaller for tablets */
+          letter-spacing: 1.2px; /* Adjusted spacing */
+          margin-bottom: 20px; /* Reduced bottom margin */
+          text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Lighter shadow for tablets */
+        }
+      }
+
+      /* Mobile Devices */
+      @media (max-width: 480px) {
+        .open-positions h2 {
+          font-size: 2.5em; /* Reduced font size for smaller screens */
+          letter-spacing: 1px; /* Compact spacing for clarity */
+          margin-bottom: 15px; /* Less spacing for tighter layouts */
+          text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); /* Lighter shadow for mobile */
+        }
+      }
+
+      /* HEADER SECTION*/
+
+      .compact-header {
+        background: #f5f5f5;
+        color: #333;
+        text-align: left;
+        padding: 10px 20px;
+        border-bottom: 3px solid #d93636;
+        font-family: "Arial", sans-serif;
+      }
+
+      .compact-header .logo-container {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .compact-header .logo {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 2px solid #d93636;
+      }
+
+      .compact-header h1 {
+        font-size: 1.8em;
+        font-weight: bold;
+        margin: 0;
+        color: #d93636;
+        letter-spacing: 0.8px;
+      }
+
+      .compact-header p {
+        font-size: 1em;
+        font-weight: 400;
+        margin: 5px 0 0 75px;
+        color: #555;
+      }
+
+      .compact-header:hover h1 {
+        color: #ff4d4d;
+        transition: color 0.3s ease;
+      }
+
+      .compact-header:hover p {
+        color: #333;
+        transition: color 0.3s ease;
+      }
+
+      /* FOOTER SECTION */
+      .custom-footer {
+        background: #333;
+        color: #f5f5f5;
+        text-align: center;
+        padding: 15px 10px;
+        font-family: "Arial", sans-serif;
+        font-size: 0.9em;
+        border-top: 3px solid #d93636;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+      }
+
+      .custom-footer p {
+        margin: 0;
+        letter-spacing: 0.5px;
+        font-weight: 400;
+      }
+
+      .custom-footer p:hover {
+        color: #ff4d4d;
+        transition: color 0.3s ease;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="compact-header">
+      <div class="logo-container">
+        <img src="/images/Sortout Media.jpeg" alt="Company Logo" class="logo" />
+        <h1>Sortout Media Careers</h1>
+      </div>
+      <p>Shape the future of digital marketing with us!</p>
+    </header>
+
+    <section class="open-positions">
+      <div class="open-positions-header">
+        <h2>Open Positions</h2>
+      </div>
+      <div class="job-list">
+        <div class="job-card">
+          <i class="fas fa-laptop-code"></i>
+          <h3>Web Developer</h3>
+          <p><strong>Location:</strong> Remote</p>
+          <p><strong>Experience:</strong> 3+ years</p>
+          <a href="https://qr-codes.io/Mb5D34" class="apply-btn">Apply Now</a>
+        </div>
+
+        <div class="job-card">
+          <i class="fas fa-search"></i>
+          <h3>SEO Specialist</h3>
+          <p><strong>Location:</strong> Remote</p>
+          <p><strong>Experience:</strong> 3+ years</p>
+          <a href="https://qr-codes.io/Mb5D34" class="apply-btn">Apply Now</a>
+        </div>
+
+        <div class="job-card">
+          <i class="fas fa-paint-brush"></i>
+          <h3>Graphic Designer</h3>
+          <p><strong>Location:</strong> Remote</p>
+          <p><strong>Experience:</strong> 3+ years</p>
+          <a href="https://qr-codes.io/Mb5D34" class="apply-btn">Apply Now</a>
+        </div>
+
+        <div class="job-card">
+          <i class="fas fa-chart-line"></i>
+          <h3>Digital Marketing Manager</h3>
+          <p><strong>Location:</strong> Remote</p>
+          <p><strong>Experience:</strong> 3+ years</p>
+          <a href="https://qr-codes.io/Mb5D34" class="apply-btn">Apply Now</a>
+        </div>
+
+        <div class="job-card">
+          <i class="fas fa-ad"></i>
+          <h3>PPC Specialist</h3>
+          <p><strong>Location:</strong> Remote</p>
+          <p><strong>Experience:</strong> 3+ years</p>
+          <a href="https://qr-codes.io/Mb5D34" class="apply-btn">Apply Now</a>
+        </div>
+
+        <div class="job-card">
+          <i class="fas fa-share-alt"></i>
+          <h3>Social Media Manager</h3>
+          <p><strong>Location:</strong> Remote</p>
+          <p><strong>Experience:</strong> 3+ years</p>
+          <a href="https://qr-codes.io/Mb5D34" class="apply-btn">Apply Now</a>
+        </div>
+
+        <div class="job-card">
+          <i class="fas fa-envelope"></i>
+          <h3>Email Marketing Specialist</h3>
+          <p><strong>Location:</strong> Remote</p>
+          <p><strong>Experience:</strong> 3+ years</p>
+          <a href="https://qr-codes.io/Mb5D34" class="apply-btn">Apply Now</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="custom-footer">
+      <p>&copy; 2025 Sortout Media. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
