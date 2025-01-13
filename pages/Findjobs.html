@@ -104,7 +104,6 @@
         background-color: #388e3c;
       }
 
-      /* light red background color to all divs */
       /* Apply light red background to all divs */
       div {
         background-color: #f8d7da; /* Light red background */
@@ -243,45 +242,6 @@
       }
 
       /* Default Styling for OPEN POSITIONS title (Desktop) */
-      .open-positions h2 {
-        font-family: "Roboto", sans-serif; /* Clean and modern font */
-        font-size: 4em; /* Bigger for emphasis */
-        font-weight: 800; /* Strong bold weight */
-        color: #000; /* Base black text for grounding */
-        letter-spacing: 1.5px; /* Balanced spacing for clarity */
-        text-transform: uppercase; /* Stands out as a title */
-        background: linear-gradient(
-          90deg,
-          #ff0000,
-          #8b0000,
-          #ffffff
-        ); /* Red and white gradient */
-        -webkit-background-clip: text; /* Clips gradient to the text */
-        -webkit-text-fill-color: transparent; /* Makes gradient visible */
-        text-align: center; /* Centers the title */
-        margin-bottom: 25px; /* Adds spacing below */
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Adjusted shadow for sharper text */
-      }
-
-      /* Tablet Devices */
-      @media (max-width: 768px) {
-        .open-positions h2 {
-          font-size: 3em; /* Slightly smaller for tablets */
-          letter-spacing: 1.2px; /* Adjusted spacing */
-          margin-bottom: 20px; /* Reduced bottom margin */
-          text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Lighter shadow for tablets */
-        }
-      }
-
-      /* Mobile Devices */
-      @media (max-width: 480px) {
-        .open-positions h2 {
-          font-size: 2.5em; /* Reduced font size for smaller screens */
-          letter-spacing: 1px; /* Compact spacing for clarity */
-          margin-bottom: 15px; /* Less spacing for tighter layouts */
-          text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); /* Lighter shadow for mobile */
-        }
-      }
 
       /* HEADER SECTION*/
 
@@ -355,6 +315,185 @@
       .custom-footer p:hover {
         color: #ff4d4d;
         transition: color 0.3s ease;
+      }
+
+      /* Responsive styles  */
+      /* General Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: var(--font-main);
+        line-height: 1.6;
+        color: var(--font-color-text);
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, #f7f7f7, #ffffff);
+        overflow-x: hidden;
+      }
+
+      /* Job List Styles */
+      .job-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+        padding: 40px;
+      }
+
+      /* Job Card Styles */
+      .job-card {
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .job-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .job-card i {
+        font-size: 4em;
+        color: #4caf50;
+        margin-bottom: 15px;
+      }
+
+      .job-card h3 {
+        font-size: 1.5em;
+        color: #333;
+        margin-bottom: 10px;
+        font-weight: bold;
+        overflow: hidden;
+      }
+
+      .job-card p {
+        font-size: 1em;
+        color: #555;
+        margin-bottom: 15px;
+      }
+
+      .apply-btn {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        font-size: 1em;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+      }
+
+      .apply-btn:hover {
+        background-color: #388e3c;
+      }
+
+      /* Open Positions Title */
+      .open-positions h2 {
+        font-size: 4em;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        color: #333; /* Solid fallback color */
+        background: linear-gradient(90deg, #ff0000, #8b0000, #ffffff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text; /* Standard background-clip for non-WebKit browsers */
+      }
+
+      @media (max-width: 768px) {
+        .open-positions h2 {
+          font-size: 3em;
+          color: #333; /* Solid color for smaller devices */
+          background: none; /* Remove gradient */
+          -webkit-background-clip: initial;
+          -webkit-text-fill-color: initial;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .open-positions h2 {
+          font-size: 2.5em;
+          color: #333; /* Solid color for smaller devices */
+          background: none; /* Remove gradient */
+          -webkit-background-clip: initial;
+          -webkit-text-fill-color: initial;
+        }
+      }
+
+      /* Responsive Styles */
+      /* Tablet View */
+      @media (max-width: 768px) {
+        .job-list {
+          padding: 20px;
+        }
+
+        .open-positions h2 {
+          font-size: 3em;
+          margin-bottom: 15px;
+        }
+
+        .job-card {
+          padding: 15px;
+        }
+
+        .job-card h3 {
+          font-size: 1.2em;
+        }
+
+        .apply-btn {
+          padding: 8px 15px;
+          font-size: 0.9em;
+        }
+      }
+
+      /* Mobile View */
+      @media (max-width: 480px) {
+        .job-list {
+          padding: 10px;
+        }
+
+        .open-positions h2 {
+          font-size: 2em;
+          margin-bottom: 10px;
+        }
+
+        .job-card {
+          padding: 10px;
+        }
+
+        .job-card i {
+          font-size: 3em;
+        }
+
+        .job-card h3 {
+          font-size: 1em;
+        }
+
+        .apply-btn {
+          padding: 6px 12px;
+          font-size: 0.8em;
+        }
+
+        /* CENTERING THE H3 HEADING */
+        .job-card h3 {
+          font-size: 1.5em;
+          font-family: "Arial", sans-serif;
+          color: #333;
+          margin-bottom: 10px;
+          font-weight: bold;
+          width: 288px;
+          height: 76.78px;
+          overflow: hidden;
+          line-height: 1.2;
+          text-align: center; /* Center the text */
+          margin: 0 auto; /* Center the h3 element horizontally within the card */
+        }
       }
     </style>
   </head>
