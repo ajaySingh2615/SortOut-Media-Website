@@ -143,7 +143,11 @@
       /* Section Styles */
       /* Section Styles */
       .open-positions {
-        padding: 40px;
+        padding-top: 0px;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding: 0 40px 40px 40px;
+        /* padding: 40px; */
         background-color: #f8f9fa;
         text-align: center;
       }
@@ -408,31 +412,68 @@
       }
 
       /* Pagination Styles */
+      /* Pagination Styles */
       #pagination {
-        margin-top: 20px;
+        margin-top: 30px;
         text-align: center;
       }
 
       #pagination button {
-        padding: 10px;
-        margin: 0 5px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        background-color: #f4f4f4;
-        cursor: pointer;
+        padding: 12px 20px; /* Increased padding for larger buttons */
+        margin: 0 8px; /* Increased spacing between buttons */
+        border: 1px solid #ff4d4d; /* Red border for buttons */
+        border-radius: 8px; /* Smooth rounded corners */
+        background-color: #fff; /* White background for buttons */
+        color: #333; /* Dark text color for readability */
+        font-size: 18px; /* Larger font size for buttons */
+        font-weight: bold; /* Bold text for emphasis */
+        cursor: pointer; /* Pointer cursor for clickable buttons */
+        transition: all 0.3s ease; /* Smooth transition for hover and focus effects */
       }
 
       #pagination button:disabled {
-        background-color: #e0e0e0;
-        cursor: not-allowed;
+        background-color: #f5f5f5; /* Muted white-gray background for disabled buttons */
+        color: #aaa; /* Dimmed text color */
+        border-color: #ddd; /* Lighter border for disabled buttons */
+        cursor: not-allowed; /* Show not-allowed cursor */
       }
 
       #pagination button:hover:not(:disabled) {
-        background-color: #dcdcdc;
+        background-color: #d32f2f; /* Red background on hover */
+        color: #fff; /* White text for better contrast */
+        border-color: #ff1a1a; /* Slightly darker red border on hover */
       }
 
       #pagination button:focus {
-        outline: none;
+        outline: none; /* Remove default focus outline */
+        box-shadow: 0 0 8px #d32f2f; /* Add subtle red focus shadow */
+      }
+
+      #pagination button.active {
+        background-color: #d32f2f; /* Red background for active button */
+        color: #fff; /* White text for active button */
+        border-color: #e60000; /* Darker red border for active button */
+      }
+
+      /* Reset button */
+      .reset-filters-btn {
+        background-color: #4caf50; /* Green background */
+        color: white; /* White text */
+        font-size: 16px; /* Font size */
+        padding: 10px 20px; /* Padding for button */
+        border: none; /* No border */
+        border-radius: 5px; /* Rounded corners */
+        cursor: pointer; /* Pointer cursor on hover */
+        transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+      }
+
+      .reset-filters-btn:hover {
+        background-color: #45a049; /* Darker green on hover */
+        transform: scale(1.05); /* Slight scale effect on hover */
+      }
+
+      .reset-filters-btn:focus {
+        outline: none; /* Removes focus outline */
       }
     </style>
   </head>
@@ -479,7 +520,9 @@
           placeholder="Filter by price"
           oninput="applyFilters()"
         />
-        <button id="resetFilters">Reset Filters</button>
+        <button id="resetFilters" class="reset-filters-btn">
+          Reset Filters
+        </button>
       </div>
     </section>
 
