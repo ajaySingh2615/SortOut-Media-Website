@@ -105,12 +105,18 @@
       "
     >
       <div class="nav-container">
-        <a href="#" class="logo">YourLogo</a>
+        <a href="#" class="logo">MyBrand</a>
+        <button class="menu-toggle" aria-label="Toggle Navigation">
+          <lord-icon
+            src="https://cdn.lordicon.com/wloilxuq.json"
+            trigger="click"
+          ></lord-icon>
+        </button>
         <ul class="nav-links">
           <li>
             <a href="#home">
               <lord-icon
-                src="https://cdn.lordicon.com/dxjqoygy.json"
+                src="https://cdn.lordicon.com/mrdiiocb.json"
                 trigger="hover"
               ></lord-icon>
               <span>Home</span>
@@ -119,7 +125,7 @@
           <li>
             <a href="#about">
               <lord-icon
-                src="https://cdn.lordicon.com/ndydpcaq.json"
+                src="https://cdn.lordicon.com/slkvcfos.json"
                 trigger="hover"
               ></lord-icon>
               <span>About</span>
@@ -128,25 +134,25 @@
           <li>
             <a href="pages/Findjobs.html">
               <lord-icon
-                src="https://cdn.lordicon.com/ndydpcaq.json"
+                src="https://cdn.lordicon.com/jvucoldz.json"
                 trigger="hover"
               ></lord-icon>
               <span>Find Jobs</span>
             </a>
           </li>
           <li>
-            <a href="/pages/findTalent.html">
+            <a href="pages/findTalent.html">
               <lord-icon
-                src="https://cdn.lordicon.com/hbvgknxo.json"
+                src="https://cdn.lordicon.com/tifgngoc.json"
                 trigger="hover"
               ></lord-icon>
-              <span>BrowseTalent</span>
+              <span>Browse Talent</span>
             </a>
           </li>
           <li>
             <a href="#services">
               <lord-icon
-                src="https://cdn.lordicon.com/hpivxauj.json"
+                src="https://cdn.lordicon.com/nkmsrxys.json"
                 trigger="hover"
               ></lord-icon>
               <span>Services</span>
@@ -155,16 +161,16 @@
           <li>
             <a href="#contact">
               <lord-icon
-                src="https://cdn.lordicon.com/bhfjfgqz.json"
+                src="https://cdn.lordicon.com/puvaffet.json"
                 trigger="hover"
               ></lord-icon>
               <span>Contact</span>
             </a>
           </li>
           <li>
-            <a href="browseTalent.html">
+            <a href="#register" class="register-button">
               <lord-icon
-                src="https://cdn.lordicon.com/bhfjfgqz.json"
+                src="https://cdn.lordicon.com/hbvgknxo.json"
                 trigger="hover"
               ></lord-icon>
               <span>Register</span>
@@ -173,6 +179,26 @@
         </ul>
       </div>
     </section>
+
+    <script>
+      const toggleMenu = document.querySelector(".menu-toggle");
+      const navLinks = document.querySelector(".nav-links");
+      const body = document.body;
+
+      // Toggle the menu
+      toggleMenu.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+        body.classList.toggle("menu-open");
+      });
+
+      // Close the menu when a link is clicked
+      document.querySelectorAll(".nav-links a").forEach((link) => {
+        link.addEventListener("click", () => {
+          navLinks.classList.remove("active");
+          body.classList.remove("menu-open");
+        });
+      });
+    </script>
 
     <!-- </section> -->
 
@@ -521,194 +547,6 @@
     </section>
 
     <!-- OUR DIGITAL TOOLKIT KIT SECTION -->
-
-    <section style="background-color: #252525" style="overflow: hidden">
-      <div class="grid-container">
-        <h2 class="grid-heading">Our Digital Toolkit</h2>
-        <div class="grid">
-          <!-- Grid Items -->
-          <div class="grid-item">
-            <div class="icon-container">
-              <lord-icon
-                src="https://cdn.lordicon.com/bkhzcebe.json"
-                trigger="hover"
-                colors="primary:#ffffff,secondary:#fb0000"
-                stroke="90"
-              ></lord-icon>
-            </div>
-            <p class="grid-title">Social Media Marketing</p>
-          </div>
-
-          <div class="grid-item">
-            <div class="icon-container">
-              <lord-icon
-                src="https://cdn.lordicon.com/urhcgqxz.json"
-                trigger="hover"
-                colors="primary:#ffffff,secondary:#fb0000"
-                stroke="90"
-              ></lord-icon>
-            </div>
-            <p class="grid-title">Website Development</p>
-          </div>
-
-          <div class="grid-item">
-            <div class="icon-container">
-              <lord-icon
-                src="https://cdn.lordicon.com/puvaffet.json"
-                trigger="hover"
-                colors="primary:#ffffff,secondary:#fb0000"
-                stroke="90"
-              ></lord-icon>
-            </div>
-            <p class="grid-title">Logo Designing</p>
-          </div>
-
-          <div class="grid-item">
-            <div class="icon-container">
-              <lord-icon
-                src="https://cdn.lordicon.com/kktslayi.json"
-                trigger="hover"
-                colors="primary:#ffffff,secondary:#fb0000"
-                stroke="90"
-              ></lord-icon>
-            </div>
-            <p class="grid-title">Graphic Designing</p>
-          </div>
-
-          <div class="grid-item">
-            <div class="icon-container">
-              <lord-icon
-                src="https://cdn.lordicon.com/uqpazftn.json"
-                trigger="hover"
-                colors="primary:#ffffff,secondary:#fb0000"
-                stroke="90"
-              ></lord-icon>
-            </div>
-            <p class="grid-title">Viral Marketing</p>
-          </div>
-
-          <div class="grid-item">
-            <div class="icon-container">
-              <lord-icon
-                src="https://cdn.lordicon.com/fijnlyfo.json"
-                trigger="hover"
-                colors="primary:#ffffff,secondary:#fb0000"
-                stroke="90"
-              ></lord-icon>
-            </div>
-            <p class="grid-title">Influencer Marketing</p>
-          </div>
-
-          <div class="grid-item">
-            <div class="icon-container">
-              <lord-icon
-                src="https://cdn.lordicon.com/zrcjngwz.json"
-                trigger="hover"
-                colors="primary:#ffffff,secondary:#fb0000"
-                stroke="90"
-              ></lord-icon>
-            </div>
-            <p class="grid-title">Meme Marketing</p>
-          </div>
-
-          <div class="grid-item">
-            <div class="icon-container">
-              <lord-icon
-                src="https://cdn.lordicon.com/zgzyclie.json"
-                trigger="hover"
-                colors="primary:#ffffff,secondary:#fb0000"
-                stroke="90"
-              ></lord-icon>
-            </div>
-            <p class="grid-title">Google/Facebook Reviews</p>
-          </div>
-
-          <div class="grid-item">
-            <div class="icon-container">
-              <lord-icon
-                src="https://cdn.lordicon.com/gdbwtqvx.json"
-                trigger="hover"
-                colors="primary:#ffffff,secondary:#fb0000"
-                stroke="90"
-              ></lord-icon>
-            </div>
-            <p class="grid-title">Search Engine Optimization</p>
-          </div>
-
-          <div class="grid-item">
-            <div class="icon-container">
-              <lord-icon
-                src="https://cdn.lordicon.com/vixtkkbk.json"
-                trigger="hover"
-                colors="primary:#ffffff,secondary:#fb0000"
-                stroke="90"
-              ></lord-icon>
-            </div>
-            <p class="grid-title">Photography</p>
-          </div>
-
-          <div class="grid-item">
-            <div class="icon-container">
-              <lord-icon
-                src="https://cdn.lordicon.com/hjeefwhm.json"
-                trigger="hover"
-                colors="primary:#ffffff,secondary:#fb0000"
-                stroke="90"
-              ></lord-icon>
-            </div>
-            <p class="grid-title">Video Production</p>
-          </div>
-
-          <div class="grid-item">
-            <div class="icon-container">
-              <lord-icon
-                src="https://cdn.lordicon.com/slkvcfos.json"
-                trigger="hover"
-                colors="primary:#ffffff,secondary:#fb0000"
-                stroke="90"
-              ></lord-icon>
-            </div>
-            <p class="grid-title">Content Creation</p>
-          </div>
-
-          <div class="grid-item">
-            <div class="icon-container">
-              <lord-icon
-                src="https://cdn.lordicon.com/ptkxwtoz.json"
-                trigger="hover"
-                colors="primary:#ffffff,secondary:#fb0000"
-                stroke="90"
-              ></lord-icon>
-            </div>
-            <p class="grid-title">Marketing Strategy</p>
-          </div>
-
-          <div class="grid-item">
-            <div class="icon-container">
-              <lord-icon
-                src="https://cdn.lordicon.com/lupuorrc.json"
-                trigger="hover"
-                colors="primary:#ffffff,secondary:#fb0000"
-                stroke="90"
-              ></lord-icon>
-            </div>
-            <p class="grid-title">Brand Management</p>
-          </div>
-
-          <div class="grid-item">
-            <div class="icon-container">
-              <lord-icon
-                src="https://cdn.lordicon.com/jyijxhpu.json"
-                trigger="hover"
-                colors="primary:#ffffff,secondary:#fb0000"
-                stroke="90"
-              ></lord-icon>
-            </div>
-            <p class="grid-title">E-commerce Solutions</p>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- IN THE NEWS SECTION -->
 
