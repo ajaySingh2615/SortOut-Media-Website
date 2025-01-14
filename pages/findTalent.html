@@ -270,7 +270,7 @@
       /* Responsive Design */
       @media (min-width: 1200px) {
         #displayData .custom-card {
-          width: calc(20% - 30px); /* 5 divs in a row */
+          /* 5 divs in a row */
         }
       }
 
@@ -361,6 +361,79 @@
         font-size: 1.2rem;
         font-weight: bold;
       }
+
+      /* Filter Section Styling */
+      .filter-section {
+        padding: 20px;
+        background-color: #ffffff;
+        margin-bottom: 40px;
+        border-radius: 10px;
+      }
+
+      .filter-section h2 {
+        font-size: 1.8em;
+        margin-bottom: 15px;
+        color: var(--primary-red);
+      }
+
+      .filters {
+        background-color: #fff;
+        display: flex;
+        flex-wrap: wrap; /* Allows wrapping of items to the next line */
+        gap: 20px; /* Adds space between each filter block */
+      }
+
+      .filters label {
+        font-weight: 600;
+        color: #333;
+        /* min-width: 150px; Ensures the label width stays fixed */
+        display: flex;
+        align-items: center;
+      }
+
+      .filters input {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        width: 100%;
+        max-width: 300px;
+      }
+
+      /* Optional: Adjusts the container when smaller screens */
+      @media screen and (max-width: 768px) {
+        .filters {
+          flex-direction: column; /* Stacks inputs vertically on smaller screens */
+          gap: 10px;
+        }
+      }
+
+      /* Pagination Styles */
+      #pagination {
+        margin-top: 20px;
+        text-align: center;
+      }
+
+      #pagination button {
+        padding: 10px;
+        margin: 0 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f4f4f4;
+        cursor: pointer;
+      }
+
+      #pagination button:disabled {
+        background-color: #e0e0e0;
+        cursor: not-allowed;
+      }
+
+      #pagination button:hover:not(:disabled) {
+        background-color: #dcdcdc;
+      }
+
+      #pagination button:focus {
+        outline: none;
+      }
     </style>
   </head>
   <body>
@@ -372,14 +445,59 @@
       <p>Shape the future of digital marketing with us!</p>
     </header>
 
+    <section class="filter-section">
+      <h2>Filter Candidates</h2>
+      <div class="filters">
+        <label for="nameFilter">Name:</label>
+        <input
+          type="text"
+          id="nameFilter"
+          placeholder="Filter by name"
+          oninput="applyFilters()"
+        />
+
+        <label for="ageFilter">Age:</label>
+        <input
+          type="number"
+          id="ageFilter"
+          placeholder="Filter by age"
+          oninput="applyFilters()"
+        />
+
+        <label for="experienceFilter">Experience:</label>
+        <input
+          type="number"
+          id="experienceFilter"
+          placeholder="Filter by experience (in years)"
+          oninput="applyFilters()"
+        />
+
+        <label for="priceFilter">Price:</label>
+        <input
+          type="number"
+          id="priceFilter"
+          placeholder="Filter by price"
+          oninput="applyFilters()"
+        />
+        <button id="resetFilters">Reset Filters</button>
+      </div>
+    </section>
+
     <section class="open-positions">
       <div class="open-positions-header">
         <h2>Our Talents</h2>
       </div>
+
       <div class="job-list">
+        <!-- <div id="pagination"> -->
         <div id="displayData" class="row">
           <!-- Data fetched will be displayed here as cards -->
         </div>
+
+        <!-- </div> -->
+      </div>
+      <div id="pagination">
+        <!-- Pagination buttons will be displayed here -->
       </div>
     </section>
 
@@ -391,45 +509,162 @@
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const displayData = document.getElementById("displayData");
+        const pagination = document.getElementById("pagination");
+
+        let originalData = [];
+        let filteredData = [];
+        let currentPage = 1;
+        const itemsPerPage = 10;
 
         // Fetch and display data on page load
         async function fetchData() {
           try {
             const response = await fetch("http://localhost:3000/fetch-data");
             const data = await response.json();
-            console.log("Fetched Data:", data); // Debugging line
-            renderData(data);
+            console.log("Fetched Data:", data);
+            originalData = data;
+            filteredData = [...originalData]; // Keep a copy of the original data
+            renderData(); // Render data after fetching
+            setupPagination();
           } catch (error) {
             console.error("Error fetching data:", error);
           }
         }
 
         // Render data dynamically
-        // Render data dynamically with the "Book Now" button
-        function renderData(data) {
+        function renderData() {
           displayData.innerHTML = ""; // Clear existing content
-          data.forEach((item) => {
+          const startIndex = (currentPage - 1) * itemsPerPage;
+          const endIndex = startIndex + itemsPerPage;
+          const currentData = filteredData.slice(startIndex, endIndex);
+
+          currentData.forEach((item) => {
             const card = document.createElement("div");
             card.className = "custom-card";
             card.innerHTML = `
-      <div class="custom-card-img-wrapper">
-        <img src="${item.image}" alt="User Image" class="custom-card-img">
-      </div>
-      <div class="custom-card-body">
-        <h3 class="custom-card-title">${item.name}</h3>
-        <ul class="custom-card-details">
-          <li><strong>Age:</strong> ${item.age}</li>
-          <li><strong>Experience:</strong> ${item.experience} years</li>
-        </ul>
-        <button class="book-now-btn">Book Now</button> <!-- Book Now Button -->
-      </div>
-    `;
+        <div class="custom-card-img-wrapper">
+          <img src="${item.image}" alt="User Image" class="custom-card-img">
+        </div>
+        <div class="custom-card-body">
+          <h3 class="custom-card-title">${item.name}</h3>
+          <ul class="custom-card-details">
+            <li><strong>Age:</strong> ${item.age}</li>
+            <li><strong>Experience:</strong> ${item.experience} years</li>
+            <li><strong>Price:</strong> ₹${item.price}</li>
+          </ul>
+          <button class="book-now-btn">Book Now</button>
+        </div>
+      `;
             displayData.appendChild(card);
           });
         }
 
-        // Fetch data when the page is loaded
+        // Set up pagination buttons
+        function setupPagination() {
+          const totalPages = Math.ceil(filteredData.length / itemsPerPage);
+          pagination.innerHTML = ""; // Clear previous pagination buttons
+
+          const prevButton = document.createElement("button");
+          prevButton.innerText = "Previous";
+          prevButton.disabled = currentPage === 1;
+          prevButton.addEventListener("click", () => {
+            if (currentPage > 1) {
+              currentPage--;
+              renderData();
+              setupPagination();
+            }
+          });
+          pagination.appendChild(prevButton);
+
+          for (let i = 1; i <= totalPages; i++) {
+            const pageButton = document.createElement("button");
+            pageButton.innerText = i;
+            pageButton.classList.toggle("active", i === currentPage);
+            pageButton.addEventListener("click", () => {
+              currentPage = i;
+              renderData();
+              setupPagination();
+            });
+            pagination.appendChild(pageButton);
+          }
+
+          const nextButton = document.createElement("button");
+          nextButton.innerText = "Next";
+          nextButton.disabled = currentPage === totalPages;
+          nextButton.addEventListener("click", () => {
+            if (currentPage < totalPages) {
+              currentPage++;
+              renderData();
+              setupPagination();
+            }
+          });
+          pagination.appendChild(nextButton);
+        }
+
+        // Apply filters on the displayed data
+        function applyFilters() {
+          const nameFilter = document
+            .getElementById("nameFilter")
+            .value.toLowerCase();
+          const ageFilter = document.getElementById("ageFilter").value;
+          const experienceFilter =
+            document.getElementById("experienceFilter").value;
+          const priceFilter = document.getElementById("priceFilter").value;
+
+          // Apply filters to original data
+          filteredData = originalData.filter((item) => {
+            const matchesName = item.name.toLowerCase().includes(nameFilter);
+            const matchesAge = !ageFilter || item.age === parseInt(ageFilter);
+            const matchesExperience =
+              !experienceFilter ||
+              item.experience >= parseInt(experienceFilter);
+            const matchesPrice =
+              !priceFilter || item.price <= parseInt(priceFilter);
+            return (
+              matchesName && matchesAge && matchesExperience && matchesPrice
+            );
+          });
+
+          currentPage = 1; // Reset to first page when filters are applied
+          renderData();
+          setupPagination();
+        }
+
+        // Reset filters
+        function resetFilters() {
+          document.getElementById("nameFilter").value = "";
+          document.getElementById("ageFilter").value = "";
+          document.getElementById("experienceFilter").value = "";
+          document.getElementById("priceFilter").value = "";
+
+          // When filters are reset, show original data
+          filteredData = [...originalData]; // Reset filtered data to original data
+          currentPage = 1; // Reset to first page
+          renderData();
+          setupPagination();
+        }
+
+        // Load the data initially
         fetchData();
+
+        // Event listeners for filters
+        document
+          .getElementById("nameFilter")
+          .addEventListener("input", applyFilters);
+        document
+          .getElementById("ageFilter")
+          .addEventListener("input", applyFilters);
+        document
+          .getElementById("experienceFilter")
+          .addEventListener("input", applyFilters);
+        document
+          .getElementById("priceFilter")
+          .addEventListener("input", applyFilters);
+
+        // Event listener for reset filters button (if you have one)
+        document
+          .getElementById("resetFilters")
+          .addEventListener("click", resetFilters);
       });
     </script>
   </body>
