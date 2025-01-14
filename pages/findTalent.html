@@ -419,40 +419,57 @@
       }
 
       #pagination button {
-        padding: 12px 20px; /* Increased padding for larger buttons */
-        margin: 0 8px; /* Increased spacing between buttons */
-        border: 1px solid #ff4d4d; /* Red border for buttons */
-        border-radius: 8px; /* Smooth rounded corners */
-        background-color: #fff; /* White background for buttons */
-        color: #333; /* Dark text color for readability */
-        font-size: 18px; /* Larger font size for buttons */
-        font-weight: bold; /* Bold text for emphasis */
-        cursor: pointer; /* Pointer cursor for clickable buttons */
-        transition: all 0.3s ease; /* Smooth transition for hover and focus effects */
+        padding: 10px 16px; /* Default padding */
+        margin: 0 6px; /* Default margin */
+        border: 1px solid #ff4d4d;
+        border-radius: 8px;
+        background-color: #fff;
+        color: #333;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
       }
 
       #pagination button:disabled {
-        background-color: #f5f5f5; /* Muted white-gray background for disabled buttons */
-        color: #aaa; /* Dimmed text color */
-        border-color: #ddd; /* Lighter border for disabled buttons */
-        cursor: not-allowed; /* Show not-allowed cursor */
+        background-color: #f5f5f5;
+        color: #aaa;
+        border-color: #ddd;
+        cursor: not-allowed;
       }
 
       #pagination button:hover:not(:disabled) {
-        background-color: #d32f2f; /* Red background on hover */
-        color: #fff; /* White text for better contrast */
-        border-color: #ff1a1a; /* Slightly darker red border on hover */
+        background-color: #d32f2f;
+        color: #fff;
+        border-color: #ff1a1a;
       }
 
       #pagination button:focus {
-        outline: none; /* Remove default focus outline */
-        box-shadow: 0 0 8px #d32f2f; /* Add subtle red focus shadow */
+        outline: none;
+        box-shadow: 0 0 8px #d32f2f;
       }
 
       #pagination button.active {
-        background-color: #d32f2f; /* Red background for active button */
-        color: #fff; /* White text for active button */
-        border-color: #e60000; /* Darker red border for active button */
+        background-color: #d32f2f;
+        color: #fff;
+        border-color: #e60000;
+      }
+
+      /* Responsive design for smaller screens */
+      @media (max-width: 768px) {
+        #pagination button {
+          padding: 8px 14px; /* Reduced padding for smaller screens */
+          font-size: 14px; /* Smaller font size for smaller screens */
+        }
+      }
+
+      /* Responsive design for very small screens */
+      @media (max-width: 480px) {
+        #pagination button {
+          padding: 6px 12px; /* Further reduced padding */
+          margin: 0 4px; /* Reduced margin */
+          font-size: 12px; /* Smaller font size */
+        }
       }
 
       /* Reset button */
