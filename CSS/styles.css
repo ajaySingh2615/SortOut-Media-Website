@@ -1007,6 +1007,79 @@ section {
   }
 }
 /* ################################################# */
+/* footer styles */
+.container-fluid.background {
+  background-color: #1a1a1a; /* Dark theme background */
+  color: white; /* White text for contrast */
+  padding: 20px 0;
+}
+
+.footer_p {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.para_footer {
+  margin: 5px 0;
+}
+
+.footerlinks {
+  font-size: 14px;
+  margin: 0;
+  text-decoration: none;
+}
+
+a.white {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a.white:hover {
+  color: #ff4d4d; /* Highlight color on hover */
+}
+
+.pd-10 {
+  padding: 10px;
+}
+
+.center-mb {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.footer_img {
+  width: 20px;
+  margin-top: 5px;
+}
+
+.col-md-2, .col-md-4, .col-md-5, .col-md-6, .col-md-8 {
+  margin-bottom: 15px; /* Add space between columns on smaller screens */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .col-md-2, .col-md-4, .col-md-5, .col-md-6, .col-md-8 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+
+
+/* ################################################# */
+/* ################################################# */
 .ov-x {
   overflow-x: hidden;
 }
@@ -5294,9 +5367,10 @@ a:hover {
   }
 }
 
+/* ####################### */
 .wp-idget {
   position: fixed;
-  right: -5px;
+  right: 20px;
   width: 201px;
   bottom: 0;
   z-index: 9999;
