@@ -93,89 +93,37 @@
     <title>Sortout Media</title>
   </head>
   <body>
-    <section
-      id="navbar"
-      style="
-        background: linear-gradient(
-          90deg,
-          rgba(255, 0, 0, 1) 0%,
-          rgba(0, 0, 0, 1) 100%
-        );
-        color: white;
-      "
-    >
+    <section>
       <div class="nav-container">
-        <a href="#" class="logo">MyBrand</a>
+        <!-- Logo Section with Image -->
+        <a href="#" class="logo">
+          <img
+            src="/images/Sortout Media SVG.svg"
+            alt="Your Logo"
+            class="logo-img"
+          />
+        </a>
+
+        <!-- Menu Toggle Button (Hamburger) -->
         <button class="menu-toggle" aria-label="Toggle Navigation">
           <lord-icon
             src="https://cdn.lordicon.com/wloilxuq.json"
             trigger="click"
+            style="width: 40px; height: 40px"
           ></lord-icon>
         </button>
+
+        <!-- Navigation Links -->
         <ul class="nav-links">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="pages/Findjobs.html" class="nav-link">Find Jobs</a></li>
           <li>
-            <a href="#home">
-              <lord-icon
-                src="https://cdn.lordicon.com/mrdiiocb.json"
-                trigger="hover"
-              ></lord-icon>
-              <span>Home</span>
-            </a>
+            <a href="pages/findTalent.html" class="nav-link">Browse Talent</a>
           </li>
-          <li>
-            <a href="#about">
-              <lord-icon
-                src="https://cdn.lordicon.com/slkvcfos.json"
-                trigger="hover"
-              ></lord-icon>
-              <span>About</span>
-            </a>
-          </li>
-          <li>
-            <a href="pages/Findjobs.html">
-              <lord-icon
-                src="https://cdn.lordicon.com/jvucoldz.json"
-                trigger="hover"
-              ></lord-icon>
-              <span>Find Jobs</span>
-            </a>
-          </li>
-          <li>
-            <a href="pages/findTalent.html">
-              <lord-icon
-                src="https://cdn.lordicon.com/tifgngoc.json"
-                trigger="hover"
-              ></lord-icon>
-              <span>Browse Talent</span>
-            </a>
-          </li>
-          <li>
-            <a href="#services">
-              <lord-icon
-                src="https://cdn.lordicon.com/nkmsrxys.json"
-                trigger="hover"
-              ></lord-icon>
-              <span>Services</span>
-            </a>
-          </li>
-          <li>
-            <a href="#contact">
-              <lord-icon
-                src="https://cdn.lordicon.com/puvaffet.json"
-                trigger="hover"
-              ></lord-icon>
-              <span>Contact</span>
-            </a>
-          </li>
-          <li>
-            <a href="#register" class="register-button">
-              <lord-icon
-                src="https://cdn.lordicon.com/hbvgknxo.json"
-                trigger="hover"
-              ></lord-icon>
-              <span>Register</span>
-            </a>
-          </li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#contact" class="nav-link contact-link">Contact</a></li>
+          <li><a href="#register" class="register-button">Register</a></li>
         </ul>
       </div>
     </section>
@@ -183,19 +131,16 @@
     <script>
       const toggleMenu = document.querySelector(".menu-toggle");
       const navLinks = document.querySelector(".nav-links");
-      const body = document.body;
 
-      // Toggle the menu
+      // Toggle the menu visibility
       toggleMenu.addEventListener("click", () => {
         navLinks.classList.toggle("active");
-        body.classList.toggle("menu-open");
       });
 
-      // Close the menu when a link is clicked
-      document.querySelectorAll(".nav-links a").forEach((link) => {
+      // Close the menu when any link is clicked
+      navLinks.querySelectorAll("a").forEach((link) => {
         link.addEventListener("click", () => {
           navLinks.classList.remove("active");
-          body.classList.remove("menu-open");
         });
       });
     </script>
@@ -213,21 +158,57 @@
         overflow: hidden;
       "
     >
+      <!-- Background Layer -->
       <div class="hero-background">
-        <!-- Unique background design with arrows -->
         <div class="arrow-pattern"></div>
+      </div>
+
+      <!-- Particle Layer -->
+      <div class="particle-container">
+        <!-- Floating Particles -->
+        <div
+          class="particle"
+          style="top: 10%; left: 20%; animation-delay: 0s"
+        ></div>
+        <div
+          class="particle"
+          style="top: 50%; left: 30%; animation-delay: 2s"
+        ></div>
+        <div
+          class="particle"
+          style="top: 80%; left: 70%; animation-delay: 4s"
+        ></div>
+        <div
+          class="particle"
+          style="top: 30%; left: 90%; animation-delay: 1s"
+        ></div>
+        <div
+          class="particle"
+          style="top: 70%; left: 40%; animation-delay: 3s"
+        ></div>
+        <div
+          class="particle"
+          style="top: 20%; left: 80%; animation-delay: 1.5s"
+        ></div>
       </div>
       <div class="container hero-container">
         <div class="hero-content">
           <h1 class="headline" id="hero-heading">
-            <span class="heading-text">Unlock the Potential of</span>
-            <span class="animate-gradient">Creative Marketing</span>
+            <span class="heading-text">Unlock the</span>
+            <span class="animate-gradient">Power of Creativity</span>
           </h1>
           <p class="subheadline" id="hero-subheading">
-            Empowering your brand with unmatched marketing strategies and
-            designs that captivate.
+            Revolutionize your brand with cutting-edge strategies and designs
+            that leave a lasting impression.
           </p>
-          <button class="btn-hero" id="cta-button">Get Started</button>
+          <div class="cta-buttons">
+            <button class="btn-hero primary" id="cta-primary">
+              Get Started
+            </button>
+            <button class="btn-hero secondary" id="cta-secondary">
+              Learn More
+            </button>
+          </div>
         </div>
       </div>
     </section>
