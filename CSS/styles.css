@@ -205,17 +205,6 @@ section {
 
 /* ####################################### */
 /* Navigation Container */
-/* Navigation Container */
-/* Navigation Container */
-/* Navigation Container */
-/* Navigation Container */
-/* Navigation Container */
-/* Navigation Container */
-/* Reset some styles */
-/* Navbar Background Color */
-/* Navbar Background Color */
-/* Navbar Container */
-/* Navbar Container */
 .nav-container {
   display: flex;
   justify-content: space-between;
@@ -333,41 +322,41 @@ section {
 /* ####################################################### */
 /* what we offer */
 /* Gradient Background Section */
-.gradient-background {
+/* .gradient-background {
   background: linear-gradient(135deg, #ff7f7f, #ffffff, #000000);
   padding: 60px 0;
   animation: fadeInAnimation 2s ease-in-out;
-}
+} */
 
 /* Main Heading */
-.primary-heading {
+/* .primary-heading {
   font-size: 36px;
   color: #ff4c4c;
   font-weight: 600;
   text-transform: uppercase;
-}
+} */
 
-.secondary-heading {
+/* .secondary-heading {
   font-size: 28px;
   color: #000000;
   font-weight: 500;
-}
+} */
 
 /* Service Column Styling */
-.service-column {
+/* .service-column {
   background: rgba(255, 255, 255, 0.8);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   padding: 30px;
   transition: transform 0.3s ease;
-}
+} */
 
-.service-column:hover {
+/* .service-column:hover {
   transform: translateY(-10px);
-}
+} */
 
 /* Service Title */
-.service-title {
+/* .service-title {
   font-size: 24px;
   color: #000000;
   font-weight: 600;
@@ -379,10 +368,10 @@ section {
   background-color: #ff4c4c;
   width: 50px;
   margin: 0 auto 20px;
-}
+} */
 
 /* Service Card Styling */
-.service-card {
+/* .service-card {
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
@@ -392,18 +381,18 @@ section {
 
 .service-card:hover {
   transform: scale(1.05);
-}
+} */
 
 /* Service Description */
-.service-description {
+/* .service-description {
   font-size: 16px;
   font-weight: 500;
   color: #333;
   margin-top: 10px;
-}
+} */
 
 /* Responsive Design */
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   .service-column {
     padding: 20px;
   }
@@ -415,38 +404,31 @@ section {
   .service-description {
     font-size: 14px;
   }
-}
+} */
 
 /* Animation */
-@keyframes fadeInAnimation {
+/* @keyframes fadeInAnimation {
   0% {
     opacity: 0;
   }
   100% {
     opacity: 1;
   }
-}
-
-.heading-text {
-  background-color: red;
-  padding: 0.2rem 1rem; /* Adds some space around the text */
-  color: white; /* Ensures text is visible against red background */
-  font-weight: bold; /* Optional: Makes the text bolder */
-}
+} */
 
 /* Gradient Animation */
-.animate-gradient {
+/* .animate-gradient {
   background: linear-gradient(45deg, #ff0000, #ffffff, #000000);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: gradient-shift 4s infinite;
-}
+} */
 
 /* #################################################### */
 /* Adjusted Container Styling */
 .light-gradient-section {
   background: linear-gradient(0deg, #fb0000, #1a1a1a);
-  padding: 70px 20px; /* Increased padding for better spacing */
+  padding: 70px 20px;
   text-align: center;
 }
 
@@ -500,10 +482,17 @@ section {
   transform: scale(1.1);
 }
 
+/* Centered Icon Styling */
 .icon-img {
   width: 80px;
-  height: 80px;
-  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px; /* Adjust the icon size */
+  color: #fff; /* Set icon color to black */
+  margin: 0 auto; /* Centers the image in the container */
+  padding: 0; /* Remove any padding inside the circle */
+  filter: none; /* Remove shadows */
 }
 
 .heading-title-sm {
@@ -511,7 +500,7 @@ section {
   font-weight: 600;
   color: #ffffff;
   font-family: "Poppins", sans-serif;
-  margin-top: 15px; /* Add spacing between the icon and the title */
+  margin-top: 10px; /* Add spacing between the icon and the title */
 }
 
 /* Line Styling */
@@ -790,9 +779,61 @@ section {
 
 /* ############################################ */
 /* ############################################ */
+/* counter section */
+.counter-section {
+  background-color: #252525;
+  padding: 50px 0;
+}
 
+.counter-box {
+  padding: 20px;
+  background: linear-gradient(145deg, #fb0000, #333);
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.counter-box:hover {
+  transform: translateY(-10px);
+}
+
+.counter-number {
+  font-size: 36px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.counter-title {
+  font-size: 18px;
+  color: #ffffff;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .counter-title {
+    font-size: 20px;
+  }
+
+  .counter-number {
+    font-size: 32px;
+  }
+}
+
+/* ########################### */
 /* ############################# */
 /* Grid Container */
+/* Grid Section Styles */
+.grid-section {
+  background-color: #252525;
+  padding: 30px 15px;
+  overflow: hidden;
+}
+
+/* OUR DIGITAL TOOLKIT */
+/* OUR DIGITAL TOOLKIT */
+/* General Responsive Styling */
+/* General Responsive Styling */
 .grid-container {
   padding: 50px;
   background: #1a1a1a;
@@ -808,11 +849,55 @@ section {
   text-transform: uppercase;
 }
 
-/* Grid Layout */
 .grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 5x5 grid */
+  grid-template-columns: repeat(5, 1fr); /* Default: 5 items per row */
   gap: 20px;
+}
+
+/* Large Devices: 4 items per row */
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Tablets: 3 items per row */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Small Tablets and Large Phones: 2 items per row */
+@media (max-width: 576px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile Screens: 1 item per row */
+@media (max-width: 414px) {
+  .grid {
+    grid-template-columns: 1fr; /* 1 item per row */
+  }
+
+  .grid-heading {
+    font-size: 1.5rem; /* Adjust heading size for smaller screens */
+  }
+
+  .grid-item {
+    padding: 15px;
+  }
+
+  .icon-container lord-icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .grid-title {
+    font-size: 1rem;
+  }
 }
 
 /* Grid Item Styling */
@@ -830,17 +915,15 @@ section {
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
 }
 
-/* Icon Styling */
 .icon-container {
   margin-bottom: 20px;
 }
 
 .icon-container lord-icon {
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
 }
 
-/* Title Styling */
 .grid-title {
   font-size: 1.2rem;
   font-family: "Poppins", sans-serif;
@@ -849,6 +932,69 @@ section {
   text-transform: uppercase;
 }
 
+/* ################################################# */
+/* ################################################# */
+/* Images for clients we wroked for */
+.client-img {
+  width: 100px; /* Fixed width */
+  height: 100px; /* Fixed height */
+  object-fit: contain; /* Preserve aspect ratio */
+  display: block;
+  background: none !important;
+  border: none !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+  border-radius: 12px; /* Rounded corners */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.client-img:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+/* Flexbox container for the client logos */
+.owl-carousel {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .client-img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .heading-main-md {
+    font-size: 1.5rem;
+  }
+
+  .owl-carousel {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .client-img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .heading-main-md {
+    font-size: 1.25rem;
+  }
+}
 /* ################################################# */
 .ov-x {
   overflow-x: hidden;
@@ -5352,4 +5498,4 @@ a:hover {
 
 /*input[type=number] {*/
 /*  -moz-appearance: textfield;*/
-/*}*/
+/*}*
