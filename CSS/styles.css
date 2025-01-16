@@ -539,16 +539,27 @@ section {
 
 .meet-influencer {
   position: relative;
-  background-color: #ffffff;
-  border: none;
-  overflow: hidden;
+  background: linear-gradient(90deg, #ff0000, #000000); /* Red to black gradient */
+  padding: 2rem;
+  text-align: center;
+  border-radius: 10px;
 }
 
-.wp-block-cover__image-background {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
+.meet-influencer h2 {
+  font-size: 5rem;
+  font-weight: 800;
+  color: #ffffff; /* White text for contrast */
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
+
+@media (max-width: 768px) {
+  .meet-influencer h2 {
+    font-size: 2rem; /* Smaller font size for mobile */
+  }
+}
+
 
 .meet-influencer p {
   font-size: 1.6rem;
@@ -659,7 +670,7 @@ section {
   justify-content: space-between;
   gap: 2rem;
   padding: 0;
-  margin: 0 auto;
+  margin: 40px auto;
   width: 1217.92px;
   height: 448.8px;
   align-items: center; /* Center cards vertically */
