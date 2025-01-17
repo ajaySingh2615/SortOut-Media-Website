@@ -1,4 +1,4 @@
-require("dotenv").config({ path: "./env" });
+require("dotenv").config({ path: ".env" });
 
 const express = require("express");
 const multer = require("multer");
@@ -14,8 +14,11 @@ const port = 3000;
 // MongoDB Connection
 const connectDB = async () => {
   try {
+    // const connectionInstance = await mongoose.connect(
+    //   `mongodb+srv://sortout:sortoutpassword@cluster0.npuol2g.mongodb.net/${DB_NAME}`
+    // );
     const connectionInstance = await mongoose.connect(
-      `mongodb+srv://sortout:sortoutpassword@cluster0.npuol2g.mongodb.net/${DB_NAME}`
+      `${process.env.MONGODB_URI}/${DB_NAME}`
     );
     console.log(
       `\n MongoDB connected !! DB Host: ${connectionInstance.connection.host}`
@@ -29,9 +32,9 @@ connectDB();
 
 // Cloudinary Configuration
 cloudinary.config({
-  cloud_name: "dswzvbhix",
-  api_key: "443489439765691",
-  api_secret: "QQqfhuPJ_mv5L3u3ikvvA_DsZy4",
+  cloud_name: `${process.env.CLOUDINARY_CLOUD_NAME}`,
+  api_key: `${process.env.CLOUDINARY_API_KEY}`,
+  api_secret: `${process.env.CLOUDINARY_API_SECRET}`,
 });
 
 // Mongoose Schema and Model

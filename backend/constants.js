@@ -1,1 +1,5 @@
-export const DB_NAME = "sortoutmedia";
+const DB_NAME = "sortoutmedia";
+
+module.exports = {
+  DB_NAME,
+};

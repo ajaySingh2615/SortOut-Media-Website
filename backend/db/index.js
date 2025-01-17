@@ -1,5 +1,5 @@
-const { DB_NAME } = require("../constants");
-const mongoose = require("mongoose");
+// Adjust the path as needed
+
 const connectDB = async () => {
   try {
     const connectionInstance = await mongoose.connect(
