@@ -51,7 +51,13 @@ const userSchema = new mongoose.Schema({
 const User = mongoose.model("User", userSchema);
 
 // Middleware
-app.use(cors());
+app.use(
+  cors({
+    origin: "http://127.0.0.1:5500", // Replace with your frontend's domain
+    methods: "GET,POST,PUT,DELETE",
+    credentials: true,
+  })
+);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 

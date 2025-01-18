@@ -1,0 +1,227 @@
+/* Root Variables for Styling */
+:root {
+  --primary-color: #ff4c61; /* Red for accents */
+  --secondary-color: #ffffff; /* White for contrast */
+  --dark-color: #1c1c1c; /* Deep black for text */
+  --text-color: #000000; /* Standard black */
+  --font-family-main: "Roboto", sans-serif; /* Main font */
+  --border-radius: 12px; /* Rounded corners */
+  --box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* General Reset */
+/* General Reset */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* Section Background */
+.bg_smm {
+  background-color: #f1f1f1; /* Light gray background */
+  padding: 50px 0;
+  overflow: hidden;
+}
+
+/* Container with responsive widths */
+.container {
+  min-width: 1200px;
+  width: 1170px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive Containers */
+@media (max-width: 1200px) {
+  .container {
+    min-width: 992px;
+    width: 970px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    min-width: 768px;
+    width: 750px;
+  }
+}
+
+/* Row Layout */
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Marquee Text */
+/* Modern Marquee Text Styling */
+/* Modern Marquee Text Styling */
+/* Modern Marquee Text Styling */
+/* Modern Marquee Text Styling */
+/* Advanced Scrolling Text with Glow and Smooth Transition */
+.smm-marq {
+  font-size: 1.5rem; /* Larger font size */
+  font-weight: bold;
+  color: #000000; /* Black text */
+  text-transform: uppercase; /* All caps for emphasis */
+  letter-spacing: 2px; /* Slight spacing between characters */
+  white-space: nowrap; /* Prevent line breaks */
+  display: inline-block;
+  position: relative;
+  animation: scrollText 15s ease-in-out infinite; /* Smooth scroll with ease */
+  padding-right: 100%; /* Extra space for the scrolling */
+  text-shadow: 0 0 10px rgba(255, 0, 0, 0.8); /* Subtle red glow effect */
+  box-sizing: border-box; /* Prevent text overflow */
+}
+
+/* Keyframes for the scrolling text */
+@keyframes scrollText {
+  0% {
+    transform: translateX(100%); /* Start off-screen on the right */
+    opacity: 0.5; /* Slight opacity at start */
+    text-shadow: 0 0 15px rgba(255, 0, 0, 0.8), 0 0 25px rgba(255, 0, 0, 0.6); /* Glow effect */
+  }
+  25% {
+    opacity: 1; /* Full opacity as it moves */
+    text-shadow: 0 0 15px rgba(255, 0, 0, 1), 0 0 25px rgba(255, 0, 0, 0.8); /* Stronger glow */
+  }
+  50% {
+    transform: translateX(0); /* Center of the screen */
+    opacity: 1;
+    text-shadow: 0 0 15px rgba(255, 0, 0, 1), 0 0 30px rgba(255, 0, 0, 0.8); /* Maximum glow */
+  }
+  75% {
+    opacity: 0.5; /* Slightly faded */
+    text-shadow: 0 0 15px rgba(255, 0, 0, 0.6), 0 0 25px rgba(255, 0, 0, 0.4); /* Glow fades */
+  }
+  100% {
+    transform: translateX(-100%); /* Off-screen on the left */
+    opacity: 0.5; /* Faded at the end */
+    text-shadow: 0 0 15px rgba(255, 0, 0, 0.6), 0 0 25px rgba(255, 0, 0, 0.4); /* Faded glow */
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .smm-marq {
+    font-size: 1.2rem; /* Smaller font size on mobile */
+  }
+}
+
+.pdr-60 {
+  padding-right: 60px;
+  padding-left: 60px;
+}
+
+/* Heading Styles */
+.heading-main {
+  font-size: 3.5rem; /* Larger font size for a more prominent heading */
+  font-weight: 700; /* Bold font weight for emphasis */
+  line-height: 1.1; /* Adjust line height for better readability */
+  color: #222; /* Slightly darker color for better contrast */
+  margin-bottom: 20px;
+  margin-top: 40px; /* Increase top margin for better spacing */
+  letter-spacing: -0.9px; /* Small letter-spacing for sleek look */
+}
+
+.heading-title-md {
+  font-size: 1.8rem; /* Larger title size */
+  font-weight: 600; /* Semi-bold for emphasis */
+  color: #444; /* Subtle dark color for the title */
+  margin-bottom: 20px;
+  letter-spacing: -0.5px; /* Slight letter-spacing */
+  text-transform: none; /* Keep text in sentence case */
+  line-height: 1.2;
+}
+
+/* Paragraph Styles */
+.p-lg {
+  font-size: 1.3rem; /* Larger paragraph text for better readability */
+  color: #555; /* Softer color for paragraphs */
+  line-height: 1.1; /* Increased line-height for readability */
+  margin-bottom: 20px;
+  max-width: 800px; /* Limit width for better text control */
+  margin-left: auto; /* Center the text block */
+  margin-right: auto; /* Center the text block */
+}
+
+/* Button Styles */
+.btn-primary {
+  background-color: #ff4c61; /* Red background */
+  color: white;
+  border: none;
+  padding: 12px 32px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #ff3366; /* Slightly darker red */
+  transform: scale(1.05);
+}
+
+/* Modern Image Styling */
+/* Modern 3D Image Styling */
+/* Modern Image Styling with Glowing Effect */
+.wd-100 {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px; /* Slight rounded corners */
+  transition: all 0.3s ease-in-out; /* Smooth transition for hover */
+  transform-style: preserve-3d; /* Enable 3D space for the image */
+  position: relative;
+  will-change: transform, box-shadow; /* Optimize for performance during animation */
+  filter: brightness(1.1) contrast(1.2); /* Increase brightness and contrast on hover */
+}
+
+/* Hover Effect for 3D */
+.wd-100:hover {
+  transform: perspective(1500px) rotateY(10deg) rotateX(10deg); /* Slight 3D rotation effect */
+  filter: brightness(1.1) contrast(1.2); /* Increase brightness and contrast on hover */
+}
+
+/* Glowing Effect on Hover */
+.wd-100::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 20px;
+  opacity: 0; /* Initially invisible */
+  transition: opacity 0.3s ease, box-shadow 0.3s ease; /* Smooth fade and shadow effect */
+}
+
+/* Glow on Hover */
+.wd-100:hover::after {
+  opacity: 1; /* Glow appears on hover */
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.7); /* More intense glow shadow */
+}
+
+/* Optional Glowing Borders (Further Enhancement) */
+.wd-100:hover {
+  filter: brightness(1.2) contrast(1.3); /* Stronger brightness and contrast */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .wd-100 {
+    border-radius: 15px; /* Smaller radius on mobile */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Reduced shadow for mobile */
+  }
+
+  .wd-100:hover {
+    transform: scale(1.02); /* More subtle zoom effect on mobile */
+    box-shadow: 0 0 20px rgba(255, 99, 132, 0.5); /* Light glow effect on mobile */
+  }
+}
